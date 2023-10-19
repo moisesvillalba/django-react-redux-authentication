@@ -158,7 +158,7 @@ SIMPLE_JWT = {
 }
 
 DJOSER = {
-    'LOGIN_FIELD': 'email',
+    'LOGIN_FIELD': 'documento',
     "USER_CREATE_PASSWORD_RETYPE": True,
     "USERNAME_CHANGED_EMAIL_CONFIRMATION": True,
     "PASSWORD_CHANGED_EMAIL_CONFIRMATION": True,
@@ -169,9 +169,10 @@ DJOSER = {
     'USERNAME_RESET_CONFIRM_URL': 'username/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': 'activate/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
+    'HIDE_USERS': False,  # Mostrar detalles de usuario en la API de Djoser
     'SERIALIZERS': {
-        'user_create': 'users.serializers.CustomUserCreateSerializer', #'users.serializers.CreateUserSerializer',
-        'user': 'users.serializers.CustomUserCreateSerializer' ,       #"users.serializers.CreateUserSerializer",
+        'user_create': 'users.serializers.CustomUserSerializer', #'users.serializers.CreateUserSerializer',
+        'user': 'users.serializers.CustomUserSerializer' ,       #"users.serializers.CreateUserSerializer",
         'user_delete': "djoser.serializers.UserDeleteSerializer",      
     },
 }
@@ -184,4 +185,4 @@ EMAIL_HOST_USER = env("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = "info@journal-bullet.com"
 DOMAIN = env("DOMAIN")
-SITE_NAME = "Journal Bullet"
+SITE_NAME = "Concurso Docente FPUNA"

@@ -4,11 +4,11 @@ from .models import User
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
-        fields = ["documento", "first_name", "last_name","email"]  # Incluye el campo 'documento' en el formulario de creación
+        fields = '__all__'  # Incluye todos los campos del modelo en el formulario de creación
         error_class = "error"
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta(UserChangeForm.Meta):
         model = User
-        fields = ["documento", "first_name", "last_name","email"]  # Incluye el campo 'documento' en el formulario de cambio
+        fields = '__all__'  # Incluye todos los campos del modelo en el formulario de cambio
         error_class = "error"
