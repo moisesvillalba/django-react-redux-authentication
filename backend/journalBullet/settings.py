@@ -186,3 +186,5 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = "info@journal-bullet.com"
 DOMAIN = env("DOMAIN")
 SITE_NAME = "Concurso Docente FPUNA"
+
+
